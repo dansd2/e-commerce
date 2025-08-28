@@ -1,12 +1,16 @@
 // App.jsx
 import React, { useState } from "react";
 import "./home.css";
+import ecobag from "../../assets/ecobag.jpg";
+import caneta from "../../assets/caneta.jpg";
+import kit from "../../assets/kit.jpg";
+import copo from "../../assets/copo.jpg";
 
 const produtos = [
-  { id: 1, nome: "Uma Bolsa EcoBag", preco: 29.99 },
-  { id: 2, nome: "Caneta Ecológica", preco: 9.90 },
-  { id: 3, nome: "Kit de Sementes", preco: 15.50 },
-  { id: 4, nome: "Copos Ecológicos", preco: 19.90 },
+  { id: 1, nome: "Uma Bolsa EcoBag", preco: 29.99, imagem: ecobag},
+  { id: 2, nome: "Caneta Ecológica", preco: 9.90, imagem: caneta },
+  { id: 3, nome: "Kit de Sementes", preco: 15.50, imagem: kit},
+  { id: 4, nome: "Copos Ecológicos", preco: 19.90, imagem: copo },
 ];
 
 export default function Home() {
@@ -56,10 +60,8 @@ export default function Home() {
         <div className="produtos">
           {produtos.map(produto => (
             <div key={produto.id} className="produto-card">
-              <img
-                src={`https://via.placeholder.com/150?text=${produto.nome}`}
-                alt={produto.nome}
-              />
+              <img src={produto.imagem} alt={produto.nome} />
+              
               <h3>{produto.nome}</h3>
               <p>R$ {produto.preco.toFixed(2)}</p>
               <button onClick={() => addToCart(produto)}>Comprar</button>
@@ -84,10 +86,6 @@ export default function Home() {
           {cart.length > 0 && <p className="total">Total: R$ {total.toFixed(2)}</p>}
         </div>
       </main>
-
-      <footer>
-        <p>© 2025 Minha Loja. Todos os direitos reservados.</p>
-      </footer>
     </div>
   );
 }

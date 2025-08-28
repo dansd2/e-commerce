@@ -90,3 +90,11 @@ header, footer {
   text-align: right;
   margin-top: 1rem;
 }
+
+
+.produto-card img {
+  width: 100%;
+  height: 180px; /* altura fixa */
+  object-fit: cover; /* mantém proporção e corta o excesso */
+  border-radius: 4px;
+}
