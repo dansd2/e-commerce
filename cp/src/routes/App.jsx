@@ -10,8 +10,8 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/users" element={<Users />} />
+        <Route path="/" element={<Cadastro />} />
+        <Route path="/home" element={<Home />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>

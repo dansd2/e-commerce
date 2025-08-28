@@ -1,10 +1,10 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import './index.css';
-import Cadastro from './pages/cadastro/cadastro.jsx';
+import Home from './pages/home/home.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Cadastro />
+    <Home />
   </StrictMode>
 );
