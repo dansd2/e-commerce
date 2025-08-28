@@ -5,10 +5,25 @@ body {
 }
 
 header {
-  background-color: #333;
+  background-color: #12180eab;
   color: #fff;
   text-align: center;
   padding: 1rem;
+}
+
+h2 {
+  color: #fff;
+  font-size: 28px;
+  align-self: center;
+  text-align: center;
+  margin-top: 20px;
+}
+
+p {
+  color: black;
+  align-self: center;
+  text-align: center;
+  margin-top: 20px;
 }
 
 .produtos {
@@ -83,11 +98,4 @@ header {
 
 .botoes-carrinho button:last-child:hover {
   opacity: 0.8;
-}
-
-
-.total {
-  font-weight: bold;
-  text-align: right;
-  margin-top: 1rem;
 }
